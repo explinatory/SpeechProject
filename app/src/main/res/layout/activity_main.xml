@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sony.speechproject.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your spoken text will appear here..."
+        android:id="@+id/resultText"
+        android:layout_above="@+id/micClick"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/micClick"
+        app:srcCompat="@mipmap/ic_action_mic"
+        android:onClick="micClick"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/speakerText"
+        android:layout_alignLeft="@+id/Stopbtn"
+        android:layout_alignStart="@+id/Stopbtn" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speakerText"
+        android:text="Edit text that will be read by phone"
+        android:layout_above="@+id/Stopbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Speakbtn"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/Clearbtn"
+        android:onClick="TTS"
+        android:text="Speak"
+        android:layout_alignRight="@+id/resultText"
+        android:layout_alignEnd="@+id/resultText"
+        android:layout_marginRight="54dp"
+        android:layout_marginEnd="54dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Stopbtn"
+        android:layout_marginBottom="23dp"
+        android:layout_above="@+id/Speakbtn"
+        android:layout_alignLeft="@+id/Speakbtn"
+        android:onClick="TTS"
+        android:text="Stop"
+        android:layout_alignStart="@+id/Speakbtn" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Clearbtn"
+        android:onClick="CLEAR"
+        android:text="Clear"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/Speakbtn"
+        android:layout_alignStart="@+id/Speakbtn" />
+
+</RelativeLayout>
